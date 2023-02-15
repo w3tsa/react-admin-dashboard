@@ -2,10 +2,12 @@ import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
+// import EmailIcon from "@mui/icons-material/Email";
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+// import TrafficIcon from "@mui/icons-material/Traffic";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -55,12 +57,31 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
+            title="88"
+            subtitle="Safety Leadership Index"
             progress="0.75"
             increase="+14%"
             icon={
-              <EmailIcon
+              <HealthAndSafetyIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
+          />
+        </Box>
+        <Box
+          gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <StatBox
+            title="95"
+            subtitle="Behavior Leadership Index "
+            progress="0.80"
+            increase="+43%"
+            icon={
+              <EmojiPeopleIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
@@ -99,25 +120,6 @@ const Dashboard = () => {
             increase="+5%"
             icon={
               <PersonAddIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box>
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <StatBox
-            title="1,325,134"
-            subtitle="Traffic Received"
-            progress="0.80"
-            increase="+43%"
-            icon={
-              <TrafficIcon
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
